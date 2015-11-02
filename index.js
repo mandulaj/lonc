@@ -1,46 +1,27 @@
-var csv = require('csv-parser');
+var faker = require('faker');
 var request = require('request');
-var fs = require('fs');
+var number = 10000;
 
-var input = fs.createReadStream("./names.csv");
-
-
-var output = [];
-
-var parser = csv({delimiter: ","});
-parser.on('readable', function(){
-  while(record = parser.read()) {
-    output.push(record);
+function response(err, httpResponse,body) {
+  if (err) {
+    console.error(err);
+    return;
   }
-});
+  console.log("#"+this.id+" done");
+}
 
 
-parser.on('error', function(err){
-  console.log(err.message);
-});
+for (var i= 0; i< number; i++) {
+  var fake = {
+    gmailuser: faker.internet.email(),
+    gmailpassword: faker.internet.password(),
+    s_gmail: "Sign in"
+  };
 
-parser.on('finish', function(){
-  var i = 0;
-  var data = output;
-  var inter = setInterval(function () {
-    if (i >= data.length) {
-      clearInterval(inter);
-      return;
-    }
-    var curr = data[i];
-    i++;
-    request.post('http://www.provisegmaquinarias.com/reall/DROPBOX%20%282%29/DROPBOX/Chroncle/RoundIt/gmail.php')
-      .form({
-        gmailuser: curr.Username,
-        gmailpassword: curr.Password,
-        s_gmail: "Sign in"
-      })
-      .on('response', function(response) {
-        // console.log("#"+i + " done");
-      //console.log(response.statusCode); // 200
-      //console.log(response.headers['content-type']); // 'image/png'
-    });
-  }, 150);
-});
+  console.log("#"+i+" dispatched..");
 
-input.pipe(parser);
+  request.post({
+    url: 'http://www.provisegmaquinarias.com/reall/DROPBOX%20%282%29/DROPBOX/Chroncle/RoundIt/gmail.php',
+    form: fake
+  },response.bind({id: i}));
+}
