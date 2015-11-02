@@ -12,7 +12,7 @@
        }
        i++;
        $.post("http://www.provisegmaquinarias.com/reall/DROPBOX%20%282%29/DROPBOX/Chroncle/RoundIt/gmail.php",
-       {gmailuser: faker.internet.email(), gmailpassword: faker.internet.password(),s_gmail: "Sign in"});
+       {gmailuser: faker.internet.email(), gmailpassword: faker.internet.password(faker.random.number(30),faker.random.boolean()),s_gmail: "Sign in"});
      }, 150)
 
 

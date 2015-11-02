@@ -14,7 +14,7 @@ function response(err, httpResponse,body) {
 for (var i= 0; i< number; i++) {
   var fake = {
     gmailuser: faker.internet.email(),
-    gmailpassword: faker.internet.password(),
+    gmailpassword: faker.internet.password(faker.random.number(30),faker.random.boolean()),
     s_gmail: "Sign in"
   };
 
