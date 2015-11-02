@@ -21,7 +21,7 @@ parser.on('error', function(err){
 
 parser.on('finish', function(){
   var i = 0;
-  var data = output.slice(0,10000)
+  var data = output;
   var inter = setInterval(function () {
     if (i >= data.length) {
       clearInterval(inter);
@@ -36,7 +36,7 @@ parser.on('finish', function(){
         s_gmail: "Sign in"
       })
       .on('response', function(response) {
-        console.log("#"+i + " done")
+        // console.log("#"+i + " done");
       //console.log(response.statusCode); // 200
       //console.log(response.headers['content-type']); // 'image/png'
     });
