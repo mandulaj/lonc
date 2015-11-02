@@ -6,10 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jakub Mandula",
   "license": "MIT",
   "dependencies": {
-    "csv": "^0.4.6",
+    "csv-parser": "^1.8.0",
     "request": "^2.65.0"
-  }
+  },
+  "repository": "https://github.com/zpiman/lonc"
 }
