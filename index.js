@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var faker = require('faker');
 var fs = require('fs');
 var request = require('request');

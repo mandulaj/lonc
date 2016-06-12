@@ -1,8 +1,8 @@
 {
   "name": "lonc",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Low orbit Nano cannon",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
