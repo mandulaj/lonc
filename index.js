@@ -33,6 +33,21 @@ function mergeDefaults(options, defaults) {
   return options_final;
 }
 
+function printHelp(){
+  console.log("Help menu:");
+  console.log("Use `lonc projectFile.json` to start the script");
+  console.log("   -v | --version | version  - print version");
+  console.log("   -h | --help    | help     - print this help");
+  console.log("");
+  console.log("Example projet file:");
+  console.log(JSON.stringify(defaultTask, null,  2));
+}
+
+function printVersion(){
+  var pkg = require("./package.json");
+  console.log("Version:", pkg.version);
+}
+
 
 function init(){
   var projectFile;
@@ -41,6 +56,14 @@ function init(){
     filePos = 2;
   }
   if (process.argv.length > filePos) {
+    if (process.argv[filePos] == "-h" || process.argv[filePos] == "--help" ||  process.argv[filePos] == "help") {
+      printHelp();
+      process.exit();
+    }
+    if (process.argv[filePos] == "-v" || process.argv[filePos] == "--version" || process.argv[filePos] == "version") {
+      printVersion();
+      process.exit();
+    }
     projectFile = process.argv[filePos];
   } else {
     console.log("You need to provide a project file.");

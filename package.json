@@ -1,6 +1,6 @@
 {
   "name": "lonc",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Low orbit Nano cannon",
   "main": "./index.js",
   "scripts": {
