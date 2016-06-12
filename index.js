@@ -19,7 +19,7 @@ var defaultTask = {
 
 function mergeDefaults(options, defaults) {
   var options_final = {};
-  for (var att in defaults) {
+  for (var attr in defaults) {
     options_final[attr] = defaults[attr];
   }
   if(!options) {
