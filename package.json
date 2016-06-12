@@ -1,7 +1,7 @@
 {
-  "name": "lomc",
-  "version": "1.0.0",
-  "description": "Low orbit Malak cannon",
+  "name": "lonc",
+  "version": "1.1.0",
+  "description": "Low orbit Nano cannon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,8 @@
   "author": "Jakub Mandula",
   "license": "MIT",
   "dependencies": {
-    "faker": "^3.0.1",
-    "request": "^2.65.0"
+    "faker": "^3.1.*",
+    "request": "^2.72.0"
   },
   "repository": "https://github.com/zpiman/lonc"
 }
