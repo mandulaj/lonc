@@ -1,10 +1,13 @@
 {
   "name": "lonc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Low orbit Nano cannon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "lonc": "./index.js"
   },
   "author": "Jakub Mandula",
   "license": "MIT",
