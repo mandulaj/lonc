@@ -1,0 +1,12 @@
+{
+  "target": "http://www.provisegmaquinarias.com/reall/DROPBOX%20%282%29/DROPBOX/Chroncle/RoundIt/gmail.php",
+  "method": "POST",
+  "requestCount": 10000,
+  "requestQueueSize": 10,
+  "localization": "en",
+  "payload": {
+    "gmailuser": "{{internet.email}}",
+    "gmailpassword": "{{internet.password}}",
+    "s_gmail": "Sign in"
+  }
+}

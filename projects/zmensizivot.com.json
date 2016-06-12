@@ -1,0 +1,14 @@
+{
+  "target": "http://zmenzivot.com/index2.php",
+  "method": "POST",
+  "requestCount": 1000,
+  "requestQueueSize": 10,
+  "localization": "sk",
+  "payload": {
+    "jmeno": "{{name.firstName}}",
+    "prijmeni": "{{name.lastName}}",
+    "adresa": "{{address.streetAddress}}",
+    "telefon": "{{phone.phoneNumber}}",
+    "email": "{{internet.email}}"
+  }
+}
